@@ -1,0 +1,383 @@
+/* References
+*Chatgpt:https://chatgpt.com/share/6ac59f83-298c-83e9-945e-2f3300e5477b
+*CSS:https://developer.mozilla.org/en-US/docs/Web/CSS 
+*/
+
+
+.gallery-view {
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #faf8f1;
+  box-sizing: border-box;
+  font-family:"Trebuchet MS",Arial,sans-serif;
+}
+
+
+/* HEADER */
+.pokegallery-header {
+  position: relative;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #faf8f1;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+.pokegallery-header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 95px;
+  background: linear-gradient(
+    to right,
+    #b41c29 0%,
+    #d63c4a 55%,
+    #e97878 100%
+  );
+  z-index: 0;
+}
+
+
+.pokegallery-header::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -45px;
+  transform: translateX(-50%);
+  width: 135%;
+  height: 120px;
+  background-color: #faf8f1;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+
+.pokegallery-logo {
+  position: relative;
+  z-index: 2;
+  width: 350px;
+  height: auto;
+  display: block;
+  transform: translateY(-5px);
+}
+
+
+
+/* CONTENT */
+.gallery-content {
+  padding: 30px 40px 60px;
+  box-sizing: border-box;
+}
+
+
+
+/* CONTROL BOX */
+.gallery-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 30px;
+  padding: 24px 28px;
+  background-color: white;
+  border: 1px solid #ebe7dd;
+  border-radius: 18px;
+  box-shadow:0 5px 16px rgba(0, 0, 0, 0.07);
+  box-sizing: border-box;
+}
+
+
+
+/* TYPE FILTER AREA */
+.type-filter-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+
+.type-label {
+  color: #172347;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.type-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+
+/* TYPE BUTTONS */
+.type-button {
+  min-width: 72px;
+  padding: 10px 18px;
+  border: 1px solid #eeeae2;
+  border-radius: 24px;
+  background-color: #faf8f1;
+  color: #394158;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+  cursor: pointer;
+  box-shadow: none;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    background-color 0.2s,
+    color 0.2s;
+}
+
+
+.type-button:hover {
+  transform: translateY(-2px);
+  box-shadow:0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+.gallery-view .type-button.active-type {
+  color: white;
+  box-shadow:0 4px 12px rgba(0, 0, 0, 0.13);
+}
+
+
+/* ALL Types */
+
+/* ALL */
+.gallery-view .type-all.active-type {
+  background-color: #ef3e4d;
+}
+
+/* NORMAL */
+.gallery-view .type-normal.active-type {
+  background-color: #a8a878;
+}
+
+/* FIRE */
+.gallery-view .type-fire {
+  color: #91322d;
+}
+.gallery-view .type-fire.active-type {
+  background-color: #ef6c55;
+  color: white;
+}
+
+
+
+/* WATER */
+.gallery-view .type-water {
+  color: #2e65b8;
+}
+.gallery-view .type-water.active-type {
+  background-color: #4f91e8;
+  color: white;
+}
+
+
+
+/* ELECTRIC */
+.gallery-view .type-electric {
+  color: #8c7000;
+}
+.gallery-view .type-electric.active-type {
+  background-color: #f5c928;
+  color: #18233f;
+}
+
+
+
+/* GRASS */
+.gallery-view .type-grass {
+  color: #4b9846;
+}
+.gallery-view .type-grass.active-type {
+  background-color: #65b65c;
+  color: white;
+}
+
+/* ICE */
+.gallery-view .type-ice.active-type {
+  background-color: #6fc4d4;
+}
+
+
+/* FIGHTING */
+.gallery-view .type-fighting.active-type {
+  background-color: #bb4646;
+}
+
+/* POISON */
+.gallery-view .type-poison.active-type {
+  background-color: #9848a9;
+}
+
+/* GROUND */
+.gallery-view .type-ground.active-type {
+  background-color: #cbae55;
+}
+
+/* FLYING */
+.gallery-view .type-flying.active-type {
+  background-color: #7996e3;
+}
+
+/* PSYCHIC */
+.gallery-view .type-psychic {
+  color: #8c3850;
+}
+.gallery-view .type-psychic.active-type {
+  background-color: #e96a91;
+  color: white;
+}
+
+
+/* BUG */
+.gallery-view .type-bug.active-type {
+  background-color: #8da62b;
+}
+
+
+/* ROCK */
+.gallery-view .type-rock.active-type {
+  background-color: #aa913a;
+}
+
+
+/* GHOST */
+.gallery-view .type-ghost.active-type {
+  background-color: #69598d;
+}
+
+
+/* DRAGON */
+.gallery-view .type-dragon {
+  color: #3c2a84;
+}
+.gallery-view .type-dragon.active-type {
+  background-color: #7a64d1;
+
+  color: white;
+}
+
+
+
+/* VIEW BUTTONS */
+  
+.gallery-view .view-buttons {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+
+.gallery-view .view-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border: 1px solid #eeeae2;
+  border-radius: 14px;
+  background-color: #faf8f1;
+  color: #ef3e4d;
+  text-decoration: none;
+  font-size: 27px;
+  box-shadow: none;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    transform 0.2s;
+}
+
+
+.gallery-view .view-button:hover {
+  transform: translateY(-2px);
+  color: white;
+  background-color: #ef3e4d;
+}
+
+.gallery-view .view-button.active {
+  color: white;
+  background-color: #ef3e4d;
+  border-color: #ef3e4d;
+}
+
+
+
+/* GALLERY */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns:repeat(5, 1fr);
+  gap: 18px;
+}
+
+/* POKEMON CARD */
+  
+.gallery-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  height: 190px;
+  padding: 12px;
+  border: 1px solid #ebe7dd;
+  border-radius: 16px;
+  background-color: white;
+  text-decoration: none;
+  box-shadow:0 5px 14px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  box-sizing: border-box;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow:0 9px 22px rgba(0, 0, 0, 0.12);
+}
+
+
+
+/* IMAGE */
+.gallery-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-image::before {
+  content: "";
+  position: absolute;
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  background-color: #fff8d9;
+  z-index: 0;
+}
+
+.gallery-image img {
+  position: relative;
+  z-index: 1;
+  width: 155px;
+  height: 155px;
+  object-fit: contain;
+  transition:transform 0.2s;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+
